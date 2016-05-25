@@ -1,0 +1,59 @@
+html{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 99%;
+  width: 99%;
+  /*border: solid;*/
+}
+#mainSection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: solid;
+}
+
+#header{
+  display: flex;
+  flex-direction: row;
+  margin-top: .5%;
+  justify-content: flex-start;
+  height: 6%;
+  width: 99%;
+  border: solid;
+}
+
+.landingPageSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+  width: 99%;
+  border: solid;
+}
+
+#pageNav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 7%;
+  width: 99%;
+  border: solid;
+}
+
+#pcImage{
+  height: 95%;
+  width: 60%;
+  border: solid;
+}
