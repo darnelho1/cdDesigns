@@ -20,40 +20,77 @@ body{
   justify-content: center;
   height: 100%;
   width: 100%;
-  border: solid;
+  /*border: solid;*/
 }
 
 #header{
   display: flex;
   flex-direction: row;
-  margin-top: .5%;
-  justify-content: flex-start;
+  /*margin-top: .5%;*/
+  justify-content: space-between;
+  align-items: flex-start;
   height: 6%;
   width: 99%;
-  border: solid;
+  border-bottom: solid;
 }
 
 .landingPageSection{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 80%;
   width: 99%;
-  border: solid;
+  /*border: solid;*/
+  background-image: url('../images/jscode.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #pageNav{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   height: 7%;
   width: 99%;
-  border: solid;
+  /*border: solid;*/
 }
 
-#pcImage{
-  height: 95%;
+.lpContainerImage{
+  position: relative;
+  /*border: solid red;*/
+  height: 100%;
+  width: 100%;
+}
+
+#lpAnimationBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  height: 85%;
   width: 60%;
-  border: solid;
+  margin-bottom: 2%;
+  /*border: solid white;*/
+}
+
+.lpScrollingImage{
+  position: relative;
+  right: 1%;
+  bottom:92%;
+  height: 58%;
+  width: 68%;
+  border: solid black 6px;
+}
+
+#pageTitle{
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 99%;
+  width: 15%;
 }
