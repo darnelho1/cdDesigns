@@ -51,9 +51,10 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   height: 7%;
   width: 99%;
-  border: solid;
+  /*border: solid;*/
 }
 
 .lpContainerImage{
