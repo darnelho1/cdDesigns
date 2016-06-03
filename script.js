@@ -1,6 +1,16 @@
 var imageCounter = 0;
 var changeImageTiming;
-var landingImagesArray = ['./images/happyhourapp.png','./images/happyHourMap.png','./images/kittenChoose2.png','./images/portfolioChooses.png', './images/portfolioWhaleTop.png' ];
+var landingImagesArray = [
+  ['./images/happyhourapp.png', 'Happy Hour App'],
+  ['./images/happyHourMap.png', 'Map View for happy Hour App'],
+  ['./images/kittenChoose2.png', 'Kitten Voter'],
+  ['./images/portfolioChooses.png', 'Corey Portfolio'],
+  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description'],
+  ['./images/happyhourapp.png', 'Happy Hour App'],
+  ['./images/portfolioChooses.png', 'Corey Portfolio'],
+  ['./images/happyhourapp.png', 'Happy Hour App'],
+  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description'],
+  ['./images/kittenChoose2.png', 'Kitten Voter']];
 
 function imageDots() {
   var numberOfImg = 0;
@@ -19,7 +29,8 @@ function imgDotClick() {
     $('#img-'+imageCounter).css('background-color', 'black');
     $(this).css('background-color', 'green');
     console.log(numberOfImg);
-    $('.lpScrollingImage').attr('src', landingImagesArray[numberOfImg]);
+    $('.lpScrollingImage').attr('src', landingImagesArray[numberOfImg][0]);
+    $('.ImageDesc').text(landingImagesArray[numberOfImg][1]);
     console.log(imageCounter);
     imageCounter = numberOfImg;
     console.log(imageCounter);
@@ -37,7 +48,8 @@ function changeImage() {
   $('.lpScrollingImage').addClass('zoomOut');
 
   setTimeout(function() {
-    $('.lpScrollingImage').attr('src', landingImagesArray[imageCounter]);
+    $('.lpScrollingImage').attr('src', landingImagesArray[imageCounter][0]);
+    $('.ImageDesc').text(landingImagesArray[imageCounter][1]);
     var oldImageCounter = imageCounter-1;
     $('#img-'+oldImageCounter).css('background-color', 'black');
     console.log(imageCounter);

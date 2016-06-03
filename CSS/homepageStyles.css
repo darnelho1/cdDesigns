@@ -97,10 +97,23 @@ body{
   width: 15%;
 }
 
+.ImageDesc{
+  color: black;
+  background-color: white;
+  font-size: 11px;
+  margin-bottom: -20%;
+  padding: 5px;
+  position: relative;
+  left: -25%;
+  top: 70%;
+  z-index: 2;
+  border-radius: 5px;
+  opacity: .9;
+}
 .imgCircles{
   position: relative;
   right: 5px;
-  bottom:145px;
+  bottom: 20%;
   display: flex;
   /*border: solid;*/
 }
