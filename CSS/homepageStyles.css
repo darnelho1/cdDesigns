@@ -76,30 +76,31 @@ body{
   justify-content: center;
   flex-wrap: wrap;
   align-items: baseline;
-  height: 100%;
-  width: 100%;
+  height: 85%;
+  width: 75%;
   /*margin-bottom: 2%;*/
   /*border: solid white;*/
 }
 
 .blackBackground{
+  /*display: none;*/
   position: relative;
-  right: 1%;
+  /*right: 1%;*/
   z-index: 0;
-  bottom: 157%;
-  height: 62%;
-  width: 68%;
+  bottom: 167%;
+  height: 68%;
+  width: 98%;
   background-color: black;
   border: solid black 6px;
 
 }
 .lpScrollingImage{
   position: relative;
-  right: 1%;
+  /*right: 1%;*/
   z-index: 2;
-  bottom:94%;
-  height: 62%;
-  width: 69%;
+  bottom:97%;
+  height: 68%;
+  width: 95%;
   border: solid black 6px;
   border-radius: 13px;
 }
@@ -122,8 +123,8 @@ body{
   padding: 5px;
   position: relative;
   /*left: -25%;*/
-  right: 25%;
-  top: 82%;
+  right: 30%;
+  top: 90%;
   z-index: 2;
   border-radius: 5px;
   opacity: .9;
@@ -131,7 +132,7 @@ body{
 .imgCircles{
   position: relative;
   right: 5px;
-  bottom: 20%;
+  bottom: 15%;
   display: flex;
   /*border: solid;*/
 }
