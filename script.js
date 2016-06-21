@@ -1,16 +1,16 @@
 var imageCounter = 0;
 var changeImageTiming;
 var landingImagesArray = [
-  ['./images/happyhourapp.png', 'Happy Hour App'],
-  ['./images/happyHourMap.png', 'Map View for happy Hour App'],
-  ['./images/kittenChoose2.png', 'Kitten Voter'],
-  ['./images/portfolioChooses.png', 'Corey Portfolio'],
-  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description'],
-  ['./images/happyhourapp.png', 'Happy Hour App'],
-  ['./images/portfolioChooses.png', 'Corey Portfolio'],
-  ['./images/happyhourapp.png', 'Happy Hour App'],
-  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description'],
-  ['./images/kittenChoose2.png', 'Kitten Voter']];
+  ['./images/happyhourapp.png', 'Happy Hour App', 'hHCountDownCode.png'],
+  ['./images/happyHourMap.png', 'Map View for happy Hour App', 'hHLocationCode.png'],
+  ['./images/kittenChoose2.png', 'Kitten Voter', 'hHScrollCode.png'],
+  ['./images/portfolioChooses.png', 'Corey Portfolio', 'hHServerPostCode.png'],
+  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'hHLocationCode.png'],
+  ['./images/happyhourapp.png', 'Happy Hour App', 'hHCountDownCode.png'],
+  ['./images/portfolioChooses.png', 'Corey Portfolio', 'hHServerPostCode.png'],
+  ['./images/happyhourapp.png', 'Happy Hour App', 'hHLocationCode.png'],
+  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'hHCountDownCode.png'],
+  ['./images/kittenChoose2.png', 'Kitten Voter', 'hHServerPostCode.png']];
 
 function imageDots() {
   var numberOfImg = 0;
@@ -31,6 +31,7 @@ function imgDotClick() {
     console.log(numberOfImg);
     $('.lpScrollingImage').attr('src', landingImagesArray[numberOfImg][0]);
     $('.ImageDesc').text(landingImagesArray[numberOfImg][1]);
+    $('.landingPageSection').css('background-image', 'url(../images/'+landingImagesArray[numberOfImg][2]+')');
     console.log(imageCounter);
     imageCounter = numberOfImg;
     console.log(imageCounter);
@@ -50,6 +51,7 @@ function changeImage() {
   setTimeout(function() {
     $('.lpScrollingImage').attr('src', landingImagesArray[imageCounter][0]);
     $('.ImageDesc').text(landingImagesArray[imageCounter][1]);
+    $('.landingPageSection').css('background-image', 'url(../images/'+landingImagesArray[imageCounter][2]+')');
     var oldImageCounter = imageCounter-1;
     $('#img-'+oldImageCounter).css('background-color', 'black');
     console.log(imageCounter);
