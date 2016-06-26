@@ -1,0 +1,28 @@
+#contactUs{
+  width: 100%;
+}
+
+#form{
+  text-align: center;
+  margin: auto;
+  border: solid;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#contactus{
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.formNames{
+  margin-left: 10%;
+}
+
+.formInfo{
+  margin-right: 10%;
+}

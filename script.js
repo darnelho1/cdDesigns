@@ -12,6 +12,8 @@ var landingImagesArray = [
   ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'hHCountDownCode.png'],
   ['./images/kittenChoose2.png', 'Kitten Voter', 'hHServerPostCode.png']];
 
+$('#contactUs').hide();
+
 function imageDots() {
   var numberOfImg = 0;
   landingImagesArray.forEach(function(each) {
@@ -77,6 +79,8 @@ function changeImage() {
     imageCounter = 0;
   }
 }
+
+
 
 
 $(window).ready(function(event) {
