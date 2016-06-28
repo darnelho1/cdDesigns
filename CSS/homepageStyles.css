@@ -49,8 +49,8 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80%;
-  width: 99%;
+  height: 87%;
+  width: 80%;
   /*border: solid;*/
   /*background-color: black;
   background-image: url('../images/jscode.jpg');
@@ -63,9 +63,9 @@ body{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 7%;
+  height: 6.5%;
   width: 110%;
-  margin-bottom: -19px;
+  /*margin-bottom: -19px;*/
   border-top:  solid 2px rgba(84, 82, 81, 0.9);
   background-color: rgba(0, 0, 0, 0.84);
   color: white;
@@ -130,6 +130,7 @@ body{
   align-items: center;
   height: 99%;
   width: 15%;
+  cursor: pointer;
 }
 
 .ImageDesc{

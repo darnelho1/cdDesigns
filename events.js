@@ -1,10 +1,23 @@
-$('#contactLink').on('click', function(event) {
-  event.preventDefault();
-  clearInterval(changeImageTiming);
+// $('#contactLink').on('click', function(event) {
+//   event.preventDefault();
+//   clearInterval(changeImageTiming);
+//   $('#mainSection').css('background-image', 'url("./images/contactUsBackground.jpg")');
+//   $('#pageNav').hide();
+//   $('.landingPageSection').hide();
+//   $('#contactUs').show();
+// });
+
+$('.navLink').click(function(){
+  console.log(this.text);
+  $("#"+this.text).show();
   $('#mainSection').css('background-image', 'url("./images/contactUsBackground.jpg")');
-  $('#pageNav').hide();
   $('.landingPageSection').hide();
-  $('#contactUs').show();
+  $('#pageNav').hide();
+
+});
+
+$('#pageTitle').click(function(event) {
+  window.open("index.html","_self");
 });
 
 
