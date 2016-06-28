@@ -12,6 +12,8 @@ var landingImagesArray = [
   ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'hHCountDownCode.png'],
   ['./images/kittenChoose2.png', 'Kitten Voter', 'hHServerPostCode.png']];
 
+$('#contactUs').hide();
+
 function imageDots() {
   var numberOfImg = 0;
   landingImagesArray.forEach(function(each) {
@@ -31,7 +33,7 @@ function imgDotClick() {
     console.log(numberOfImg);
     $('.lpScrollingImage').attr('src', landingImagesArray[numberOfImg][0]);
     $('.ImageDesc').text(landingImagesArray[numberOfImg][1]);
-    $('.landingPageSection').css('background-image', 'url(../images/'+landingImagesArray[numberOfImg][2]+')');
+    $('#mainSection').css('background-image', 'url(../images/'+landingImagesArray[numberOfImg][2]+')');
     console.log(imageCounter);
     imageCounter = numberOfImg;
     console.log(imageCounter);
@@ -51,7 +53,7 @@ function changeImage() {
   setTimeout(function() {
     $('.lpScrollingImage').attr('src', landingImagesArray[imageCounter][0]);
     $('.ImageDesc').text(landingImagesArray[imageCounter][1]);
-    $('.landingPageSection').css('background-image', 'url(../images/'+landingImagesArray[imageCounter][2]+')');
+    $('#mainSection').css('background-image', 'url(../images/'+landingImagesArray[imageCounter][2]+')');
     var oldImageCounter = imageCounter-1;
     $('#img-'+oldImageCounter).css('background-color', 'black');
     console.log(imageCounter);
@@ -77,6 +79,8 @@ function changeImage() {
     imageCounter = 0;
   }
 }
+
+
 
 
 $(window).ready(function(event) {
