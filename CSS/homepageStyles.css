@@ -35,6 +35,8 @@ body{
 }
 
 .landingPageSection{
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,6 +44,7 @@ body{
   height: 80%;
   width: 99%;
   /*border: solid;*/
+  background-color: black;
   background-image: url('../images/jscode.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,29 +65,44 @@ body{
   /*border: solid red;*/
   height: 100%;
   width: 100%;
+  margin-top: -30px;
 }
 
 #lpAnimationBox{
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   align-items: baseline;
   height: 85%;
-  width: 60%;
-  margin-bottom: 2%;
+  width: 75%;
+  /*margin-bottom: 2%;*/
   /*border: solid white;*/
 }
 
+.blackBackground{
+  /*display: none;*/
+  position: relative;
+  /*right: 1%;*/
+  z-index: 0;
+  bottom: 167%;
+  height: 68%;
+  width: 98%;
+  background-color: black;
+  border: solid black 6px;
+
+}
 .lpScrollingImage{
   position: relative;
-  right: 1%;
-  bottom:92%;
-  /*margin-left: 15%;
-  margin-top: -57%;*/
-  height: 58%;
-  width: 68%;
+  /*right: 1%;*/
+  z-index: 2;
+  bottom:97%;
+  height: 68%;
+  width: 95%;
   border: solid black 6px;
+  border-radius: 13px;
 }
 
 #pageTitle{
@@ -97,17 +115,31 @@ body{
   width: 15%;
 }
 
+.ImageDesc{
+  color: black;
+  background-color: white;
+  font-size: 15px;
+  /*margin-bottom: -20%;*/
+  padding: 5px;
+  position: relative;
+  /*left: -25%;*/
+  right: 30%;
+  top: 90%;
+  z-index: 2;
+  border-radius: 5px;
+  opacity: .9;
+}
 .imgCircles{
   position: relative;
   right: 5px;
-  bottom:145px;
+  bottom: 15%;
   display: flex;
   /*border: solid;*/
 }
 .circle{
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
   margin-left: 10px;
   background-color: black;
 }
