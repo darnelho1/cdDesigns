@@ -1,10 +1,10 @@
-$('#contactLink').on('click', function(event) {
+$('#servicesLink').on('click', function(event) {
   event.preventDefault();
   clearInterval(changeImageTiming);
-  $('#mainSection').css('background-image', 'url("./images/contactUsBackground.jpg")');
+  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
   $('#pageNav').hide();
   $('.landingPageSection').hide();
-  $('#contactUs').show();
+  $('#servicesPage').show();
 });
 
 
@@ -12,7 +12,7 @@ $('#submitForm').on('click', function(event) {
   event.preventDefault();
   $('#submitForm').unbind("click");
   $('#submitForm').css('opacity', '.3');
-  var form = $('#contactus').serializeArray();
+  var form = $('#servicesForm').serializeArray();
   var object = {
     firstName: form[0].value,
     lastName: form[1].value,
