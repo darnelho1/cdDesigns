@@ -1,5 +1,8 @@
 $('#contactLink').on('click', function(event) {
   event.preventDefault();
+  clearInterval(changeImageTiming);
+  $('#mainSection').css('background-image', 'url("./images/contactUsBackground.jpg")');
+  $('#pageNav').hide();
   $('.landingPageSection').hide();
   $('#contactUs').show();
 });

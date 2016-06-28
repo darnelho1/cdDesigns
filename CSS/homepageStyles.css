@@ -11,6 +11,7 @@ body{
   justify-content: flex-start;
   height: 99%;
   width: 99%;
+  background-color: black;
   /*border: solid;*/
 }
 #mainSection{
@@ -20,6 +21,11 @@ body{
   justify-content: center;
   height: 100%;
   width: 100%;
+  background-color: black;
+  background-image: url('../images/jscode.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   /*border: solid;*/
 }
 
@@ -30,8 +36,10 @@ body{
   justify-content: space-between;
   align-items: flex-start;
   height: 6%;
-  width: 99%;
+  width: 110%;
   border-bottom: solid;
+  background-color: rgba(0, 0, 0, 0.84);
+  color: white;
 }
 
 .landingPageSection{
@@ -44,10 +52,10 @@ body{
   height: 80%;
   width: 99%;
   /*border: solid;*/
-  background-color: black;
+  /*background-color: black;
   background-image: url('../images/jscode.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 }
 
 #pageNav{
@@ -56,8 +64,17 @@ body{
   justify-content: space-around;
   align-items: center;
   height: 7%;
-  width: 99%;
+  width: 110%;
+  margin-bottom: -19px;
+  border-top: solid;
+  background-color: rgba(0, 0, 0, 0.84);
+  color: white;
   /*border: solid;*/
+}
+
+#pageNav a {
+  color: white;
+
 }
 
 .lpContainerImage{
