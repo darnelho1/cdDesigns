@@ -1,16 +1,16 @@
 var imageCounter = 0;
 var changeImageTiming;
 var landingImagesArray = [
-  ['./images/happyhourapp.png', 'Happy Hour App', 'hHCountDownCode.png'],
-  ['./images/happyHourMap.png', 'Map View for happy Hour App', 'hHLocationCode.png'],
-  ['./images/kittenChoose2.png', 'Kitten Voter', 'hHScrollCode.png'],
-  ['./images/portfolioChooses.png', 'Corey Portfolio', 'hHServerPostCode.png'],
-  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'hHLocationCode.png'],
-  ['./images/happyhourapp.png', 'Happy Hour App', 'hHCountDownCode.png'],
-  ['./images/portfolioChooses.png', 'Corey Portfolio', 'hHServerPostCode.png'],
-  ['./images/happyhourapp.png', 'Happy Hour App', 'hHLocationCode.png'],
-  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'hHCountDownCode.png'],
-  ['./images/kittenChoose2.png', 'Kitten Voter', 'hHServerPostCode.png']];
+  ['./images/happyhourapp.png', 'Happy Hour App', 'code1.jpg'],
+  ['./images/happyHourMap.png', 'Map View for happy Hour App', 'code2.jpg'],
+  ['./images/kittenChoose2.png', 'Kitten Voter', 'code3.jpg'],
+  ['./images/portfolioChooses.png', 'Corey Portfolio', 'code4.jpg'],
+  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'code5.jpg'],
+  ['./images/happyhourapp.png', 'Happy Hour App', 'code6.jpg'],
+  ['./images/portfolioChooses.png', 'Corey Portfolio', 'code7.jpg'],
+  ['./images/happyhourapp.png', 'Happy Hour App', 'code8.jpg'],
+  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'code9.jpg'],
+  ['./images/kittenChoose2.png', 'Kitten Voter', 'code10.jpg']];
 
 function imageDots() {
   var numberOfImg = 0;
