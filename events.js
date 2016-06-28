@@ -2,7 +2,8 @@
 $('.navLink').click(function(){
   console.log(this.text);
   $("#"+this.text).show();
-  $('#mainSection').css('background-image', 'url("./images/contactUsBackground.jpg")');
+  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+  clearInterval(changeImageTiming);
   $('.landingPageSection').hide();
   $('#pageNav').hide();
 
