@@ -58,12 +58,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 87%;
-  width: 99%;
-  /*border: solid;*/
-  /*background-color: black;
-  background-image: url('../images/jscode.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;*/
+  width: 80%;
 }
 
 #pageNav{
@@ -137,6 +132,7 @@ body{
   align-items: center;
   height: 99%;
   width: 15%;
+  cursor: pointer;
 }
 
 .ImageDesc{

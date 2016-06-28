@@ -1,10 +1,15 @@
-$('#servicesLink').on('click', function(event) {
-  event.preventDefault();
-  clearInterval(changeImageTiming);
-  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
-  $('#pageNav').hide();
+
+$('.navLink').click(function(){
+  console.log(this.text);
+  $("#"+this.text).show();
+  $('#mainSection').css('background-image', 'url("./images/contactUsBackground.jpg")');
   $('.landingPageSection').hide();
-  $('#servicesPage').show();
+  $('#pageNav').hide();
+
+});
+
+$('#pageTitle').click(function(event) {
+  window.open("index.html","_self");
 });
 
 
