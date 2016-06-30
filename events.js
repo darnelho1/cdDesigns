@@ -2,7 +2,10 @@
 $('.navLink').click(function(){
   console.log(this.text);
   $("#"+this.text).show();
+  $("#"+this.text).css('display', 'flex');
   $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+  $('#mainSection').removeClass('homePageBackground');
+  $('#mainSection').addClass('otherBackground');
   clearInterval(changeImageTiming);
   $('.landingPageSection').hide();
   $('#pageNav').hide();

@@ -16,8 +16,8 @@ body{
 }
 
 @keyframes animatedBackground {
-	from { background-position: 0 25%; background-size: 80%; }
-	to { background-position: 25% 75%; background-size: 100%; }
+	from { background-position: 0 25%; background-size: 100%; }
+	to { background-position: 25% 75%; background-size: 110%; }
 }
 
 #mainSection{
@@ -31,12 +31,19 @@ body{
   background-image: url('../images/jscode.jpg');
   /*background-size: cover;*/
   background-repeat: no-repeat;
-  background-position: 0px 0px;
-  animation: animatedBackground 17s linear infinite;
-  background-size: 80%;
   /*border: solid;*/
 }
 
+.homePageBackground{
+  background-position: 0px 25%;
+  background-size: 100%;
+  animation: animatedBackground 12s linear infinite;
+}
+.otherBackground{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #header{
   display: flex;
   flex-direction: row;

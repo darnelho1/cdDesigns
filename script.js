@@ -1,16 +1,16 @@
 var imageCounter = 0;
 var changeImageTiming;
 var landingImagesArray = [
-  ['./images/happyhourapp.png', 'Happy Hour App', 'code1.jpg'],
-  ['./images/happyHourMap.png', 'Map View for happy Hour App', 'code2.jpg'],
-  ['./images/kittenChoose2.png', 'Kitten Voter', 'code3.jpg'],
-  ['./images/portfolioChooses.png', 'Corey Portfolio', 'code4.jpg'],
-  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'code5.jpg'],
-  ['./images/happyhourapp.png', 'Happy Hour App', 'code6.jpg'],
-  ['./images/portfolioChooses.png', 'Corey Portfolio', 'code7.jpg'],
-  ['./images/happyhourapp.png', 'Happy Hour App', 'code8.jpg'],
-  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'code9.jpg'],
-  ['./images/kittenChoose2.png', 'Kitten Voter', 'code10.jpg']];
+  ['./images/happyhourapp.png', 'Happy Hour App', 'code12.jpg'],
+  ['./images/happyHourMap.png', 'Map View for happy Hour App', 'code13.jpg'],
+  ['./images/kittenChoose2.png', 'Kitten Voter', 'code12.jpg'],
+  ['./images/portfolioChooses.png', 'Corey Portfolio', 'code13.jpg'],
+  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'code12.jpg'],
+  ['./images/happyhourapp.png', 'Happy Hour App', 'code13.jpg'],
+  ['./images/portfolioChooses.png', 'Corey Portfolio', 'code12.jpg'],
+  ['./images/happyhourapp.png', 'Happy Hour App', 'code13.jpg'],
+  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'code12.jpg'],
+  ['./images/kittenChoose2.png', 'Kitten Voter', 'code13.jpg']];
 
 function imageDots() {
   var numberOfImg = 0;
@@ -32,6 +32,10 @@ function imgDotClick() {
     $('.lpScrollingImage').attr('src', landingImagesArray[numberOfImg][0]);
     $('.ImageDesc').text(landingImagesArray[numberOfImg][1]);
     $('#mainSection').css('background-image', 'url(../images/'+landingImagesArray[numberOfImg][2]+')');
+    $('#mainSection').removeClass('homePageBackground');
+    setTimeout(function() {
+      $('#mainSection').addClass('homePageBackground');
+    },10);
     console.log(imageCounter);
     imageCounter = numberOfImg;
     console.log(imageCounter);
@@ -52,6 +56,10 @@ function changeImage() {
     $('.lpScrollingImage').attr('src', landingImagesArray[imageCounter][0]);
     $('.ImageDesc').text(landingImagesArray[imageCounter][1]);
     $('#mainSection').css('background-image', 'url(../images/'+landingImagesArray[imageCounter][2]+')');
+    $('#mainSection').removeClass('homePageBackground');
+    setTimeout(function() {
+      $('#mainSection').addClass('homePageBackground');
+    },10);
     var oldImageCounter = imageCounter-1;
     $('#img-'+oldImageCounter).css('background-color', 'black');
     console.log(imageCounter);
