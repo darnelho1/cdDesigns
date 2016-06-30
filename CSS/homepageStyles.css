@@ -81,6 +81,19 @@ body{
   /*border: solid;*/
 }
 
+#pageNavHeader{
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  margin-bottom: .7%;
+  align-self: flex-end;
+}
+
+#pageNavHeader a{
+  color: white;
+  font-size: .8em;
+}
 #pageNav a {
   color: white;
 

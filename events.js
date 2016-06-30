@@ -3,12 +3,21 @@ $('.navLink').click(function(){
   console.log(this.text);
   $("#"+this.text).show();
   $("#"+this.text).css('display', 'flex');
-  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
-  $('#mainSection').removeClass('homePageBackground');
-  $('#mainSection').addClass('otherBackground');
-  clearInterval(changeImageTiming);
-  $('.landingPageSection').hide();
+  if (pageOn === 'HOME') {
+    $('.landingPageSection').hide();
+    $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+    $('#mainSection').removeClass('homePageBackground');
+    $('#mainSection').addClass('otherBackground');
+    clearInterval(changeImageTiming);
+    pageOn = this.text;
+  }
+  else {
+    $('#'+pageOn).hide();
+    pageOn = this.text;
+  }
+
   $('#pageNav').hide();
+  $('#pageNavHeader').css('display', 'flex');
 
 });
 
