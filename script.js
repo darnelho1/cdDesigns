@@ -1,5 +1,6 @@
 var imageCounter = 0;
 var changeImageTiming;
+var pageOn = 'HOME';
 var landingImagesArray = [
   ['./images/happyhourapp.png', 'Happy Hour App', 'code12.jpg'],
   ['./images/happyHourMap.png', 'Map View for happy Hour App', 'code13.jpg'],

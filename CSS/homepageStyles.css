@@ -28,7 +28,7 @@ body{
   height: 100%;
   width: 100%;
   background-color: black;
-  background-image: url('../images/jscode.jpg');
+  background-image: url('/images/code12.jpg');
   /*background-size: cover;*/
   background-repeat: no-repeat;
   /*border: solid;*/
@@ -81,6 +81,19 @@ body{
   /*border: solid;*/
 }
 
+#pageNavHeader{
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  margin-bottom: .7%;
+  align-self: flex-end;
+}
+
+#pageNavHeader a{
+  color: white;
+  font-size: .8em;
+}
 #pageNav a {
   color: white;
 
