@@ -1,8 +1,5 @@
-
 $('.navLink').click(function(){
   console.log(this.text);
-  $("#"+this.text).show();
-  $("#"+this.text).css('display', 'flex');
   if (pageOn === 'HOME') {
     $('.landingPageSection').hide();
     $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
@@ -15,10 +12,42 @@ $('.navLink').click(function(){
     $('#'+pageOn).hide();
     pageOn = this.text;
   }
-
+  $("#"+this.text).show();
+  $("#"+this.text).css('display', 'flex');
   $('#pageNav').hide();
   $('#pageNavHeader').css('display', 'flex');
-
+  if (pageOn === 'PORTFOLIO') {
+    $('#scrollingArticles').empty();
+    articles.forEach(function(each) {
+      var template = $('#articleTemplate').html();
+      var compileTemplate = Handlebars.compile(template);
+      var html = compileTemplate(each);
+      $('#scrollingArticles').append(html);
+      var galleryTop = new Swiper('#'+each.id+' .gallery-top', {
+        effect: 'cube',
+        grabCursor: true,
+        cube: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+        },
+          nextButton: '#'+each.id+' .swiper-button-next',
+          prevButton: '#'+each.id+' .swiper-button-prev',
+          spaceBetween: 0,
+          keyboardControl: true
+      });
+    });
+    var swiper = new Swiper('#PORTFOLIO', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 0,
+        keyboardControl: true,
+        mousewheelControl: true
+    });
+  }
 });
 
 $('#pageTitle').click(function(event) {
@@ -59,4 +88,59 @@ $('#submitForm').on('click', function(event) {
   else {
     alert('Please fill out form completely.');
   }
+});
+
+$('.lpScrollingImage').on('click', function(event) {
+  event.preventDefault();
+  var imageClick = $(this).attr('title');
+  console.log(imageClick);
+  $('.landingPageSection').hide();
+  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+  $('#mainSection').removeClass('homePageBackground');
+  $('#mainSection').addClass('otherBackground');
+  clearInterval(changeImageTiming);
+  pageOn = 'PORTFOLIO';
+  $("#PORTFOLIO").show();
+  $("#PORTFOLIO").css('display', 'flex');
+  $('#pageNav').hide();
+  $('#pageNavHeader').css('display', 'flex');
+  $('#scrollingArticles').empty();
+  articles.forEach(function(each) {
+    var template = $('#articleTemplate').html();
+    var compileTemplate = Handlebars.compile(template);
+    var html = compileTemplate(each);
+    $('#scrollingArticles').append(html);
+    var galleryTop = new Swiper('#'+each.id+' .gallery-top', {
+      effect: 'cube',
+      grabCursor: true,
+      cube: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94
+      },
+        nextButton: '#'+each.id+' .swiper-button-next',
+        prevButton: '#'+each.id+' .swiper-button-prev',
+        spaceBetween: 0,
+        keyboardControl: true
+    });
+  });
+  var swiper = new Swiper('#PORTFOLIO', {
+      pagination: '.swiper-pagination',
+      direction: 'vertical',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 0,
+      keyboardControl: true,
+      mousewheelControl: true
+  });
+  var eachCounter = -1;
+  var pickedAtricle = 0;
+  articles.forEach(function(each) {
+    eachCounter ++;
+    if (each.id === imageClick) {
+      pickedAtricle = eachCounter;
+      swiper.slideTo(pickedAtricle);
+    }
+  });
 });
