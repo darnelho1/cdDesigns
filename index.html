@@ -13,7 +13,7 @@
     <script id='articleTemplate' type='text/template'>
       <div id='{{id}}' class="eachArticle swiper-slide">
         <div id="portLeft">
-          <h1 id='portTitle' href="{{link}}"><u>{{title}}</u></h1>
+          <h1 id='portTitle' ><a class='porLink' href="{{link}}" target='_blank'><u>{{title}}</u></a></h1>
           <div id='portImg' class="swiper">
             <div class="swiper-container gallery-top">
               <div class="swiper-wrapper portEachWrapper">
@@ -49,10 +49,10 @@
           CD Designs
         </h1>
         <nav id="pageNavHeader" style="display:none">
-          <a class="navLink" id='aboutLink' href="#">ABOUT</a>
-          <a class="navLink" id='contactLink' href="#">CONTACT</a>
-          <a class="navLink" id='servicesLink' href="#">SERVICES</a>
-          <a class="navLink" id='portfolioLink' href="#">PORTFOLIO</a>
+          <a class="navLink" id='aboutLink' href="about">ABOUT</a>
+          <a class="navLink" id='contactLink' href="contact">CONTACT</a>
+          <a class="navLink" id='servicesLink' href="services">SERVICES</a>
+          <a class="navLink" id='portfolioLink' href="portfolio">PORTFOLIO</a>
         </nav>
       </header>
 
@@ -73,10 +73,10 @@
       </article>
 
       <nav id="pageNav">
-        <a class="navLink" id='aboutLink' href="#">ABOUT</a>
-        <a class="navLink" id='contactLink' href="#">CONTACT</a>
-        <a class="navLink" id='servicesLink' href="#">SERVICES</a>
-        <a class="navLink" id='portfolioLink' href="#">PORTFOLIO</a>
+        <a class="navLink" id='aboutLink' href="about">ABOUT</a>
+        <a class="navLink" id='contactLink' href="contact">CONTACT</a>
+        <a class="navLink" id='servicesLink' href="services">SERVICES</a>
+        <a class="navLink" id='portfolioLink' href="portfolio">PORTFOLIO</a>
       </nav>
 
       <section id='SERVICES' style="display:none" class="swiper-container">

@@ -79,3 +79,8 @@ body{
   /*border: solid;*/
   width: 80%;
 }
+
+.porLink{
+  color:white;
+  cursor: pointer;
+}
