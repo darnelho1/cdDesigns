@@ -145,6 +145,7 @@ body{
   width: 95%;
   border: solid black 6px;
   border-radius: 13px;
+  cursor: pointer;
 }
 
 #pageTitle{
@@ -178,6 +179,7 @@ body{
   bottom: 15%;
   display: flex;
   /*border: solid;*/
+  cursor: pointer;
 }
 .circle{
   width: 15px;
