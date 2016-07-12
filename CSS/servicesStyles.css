@@ -56,11 +56,18 @@
   color: white;
 }
 
+#x1{
+  align-self: center;
+}
+
 .updateImgdiv{
   display: flex;
   flex-direction: row;
-  width: 20%;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 15%;
   justify-content: space-between;
+  align-items: center;
 }
 
 #webDesSrv{
