@@ -147,37 +147,91 @@ $('.lpScrollingImage').on('click', function(event) {
 });
 
 if((window.location.href.indexOf('index.html') > -1) || (window.location.href.indexOf('Index.html') > -1)){
-  history.pushState('','','');
+  history.pushState('/','/','/');
 }
 if((window.location.href.indexOf('about') > -1) || (window.location.href.indexOf('About') > -1)){
   $('.landingPageSection').hide();
   $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
   $('#mainSection').removeClass('homePageBackground');
   $('#mainSection').addClass('otherBackground');
-  clearInterval(changeImageTiming);
+  setTimeout(function functionName() {
+    clearInterval(changeImageTiming);
+  },1000);
   pageOn = 'ABOUT';
+  $("#ABOUT").show();
+  $("#ABOUT").css('display', 'flex');
+  $('#pageNav').hide();
+  $('#pageNavHeader').css('display', 'flex');
 }
 if((window.location.href.indexOf('portfolio') > -1) || (window.location.href.indexOf('Portfolio') > -1)){
   $('.landingPageSection').hide();
   $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
   $('#mainSection').removeClass('homePageBackground');
   $('#mainSection').addClass('otherBackground');
-  clearInterval(changeImageTiming);
+  setTimeout(function functionName() {
+    clearInterval(changeImageTiming);
+  },1000);
   pageOn = 'PORTFOLIO';
+  $("#PORTFOLIO").show();
+  $("#PORTFOLIO").css('display', 'flex');
+  $('#pageNav').hide();
+  $('#pageNavHeader').css('display', 'flex');
+  $('#scrollingArticles').empty();
+  articles.forEach(function(each) {
+    var template = $('#articleTemplate').html();
+    var compileTemplate = Handlebars.compile(template);
+    var html = compileTemplate(each);
+    $('#scrollingArticles').append(html);
+    var galleryTop = new Swiper('#'+each.id+' .gallery-top', {
+      effect: 'cube',
+      grabCursor: true,
+      cube: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94
+      },
+        nextButton: '#'+each.id+' .swiper-button-next',
+        prevButton: '#'+each.id+' .swiper-button-prev',
+        spaceBetween: 0,
+        keyboardControl: true
+    });
+  });
+  var swiper = new Swiper('#PORTFOLIO', {
+      pagination: '.swiper-pagination',
+      direction: 'vertical',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 0,
+      keyboardControl: true,
+      mousewheelControl: true
+  });
 }
 if((window.location.href.indexOf('services') > -1) || (window.location.href.indexOf('Services') > -1)){
   $('.landingPageSection').hide();
   $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
   $('#mainSection').removeClass('homePageBackground');
   $('#mainSection').addClass('otherBackground');
-  clearInterval(changeImageTiming);
+  setTimeout(function functionName() {
+    clearInterval(changeImageTiming);
+  },1000);
   pageOn = 'SERVICES';
+  $("#SERVICES").show();
+  $("#SERVICES").css('display', 'flex');
+  $('#pageNav').hide();
+  $('#pageNavHeader').css('display', 'flex');
 }
 if((window.location.href.indexOf('contact') > -1) || (window.location.href.indexOf('Contact') > -1)){
   $('.landingPageSection').hide();
   $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
   $('#mainSection').removeClass('homePageBackground');
   $('#mainSection').addClass('otherBackground');
-  clearInterval(changeImageTiming);
+  setTimeout(function functionName() {
+    clearInterval(changeImageTiming);
+  },1000);
   pageOn = 'CONTACT';
+  $("#CONTACT").show();
+  $("#CONTACT").css('display', 'flex');
+  $('#pageNav').hide();
+  $('#pageNavHeader').css('display', 'flex');
 }
