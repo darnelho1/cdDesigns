@@ -2,16 +2,11 @@ var imageCounter = 0;
 var changeImageTiming;
 var pageOn = 'HOME';
 var landingImagesArray = [
-  ['./images/website/happyHourHome.png', 'Happy Hour App', 'code12.jpg', 'happyHour'],
-  ['./images/website/happyHourMap.png', 'Map View for happy Hour App', 'code13.jpg', 'happyHour'],
-  ['./images/website/m1Home.png', 'M1 Tree and Landscape', 'code12.jpg', 'm1Tree'],
-  ['./images/website/m1Contact.png', 'Contact Page For M1 Tree', 'code13.jpg', 'm1Tree'],
-  ['./images/website/whalephantsContact.png', 'Contact Whalephants Page', 'code12.jpg', 'whalephants'],
-  ['./images/website/happyHourLocation.png', 'Happy Hour Location Section', 'code13.jpg', 'happyHour'],
-  ['./images/website/whalephantsHomePage.png', 'whalephants Website', 'code12.jpg', 'whalephants'],
-  ['./images/website/happyHourSearch.png', 'Happy Hour Search Section', 'code13.jpg', 'happyHour'],
-  ['./images/website/whalephantsCount.png', 'Whalephants Countdown Page', 'code12.jpg', 'whalephants'],
-  ['./images/website/whalephantsVote.png', 'Drink Voting Page For Whalephants', 'code13.jpg', 'whalephants']];
+  ['./images/homeImg/happyHourHome.png', 'Seattle Happy Hour App', 'code12.jpg', 'happyHour'],
+  ['./images/homeImg/m1Home.png', 'M1 Tree and Landscape', 'code13.jpg', 'm1tree'],
+  ['./images/homeImg/seaBrewHome.png', 'Seattle Brew Site', 'code12.jpg', 'seaBrew'],
+  ['./images/homeImg/whalephantsHome.png', 'Whalephants Website', 'code13.jpg', 'Whalephants']
+];
 swiperJS();
 
 function imageDots() {
