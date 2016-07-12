@@ -79,41 +79,73 @@
         <a class="navLink" id='portfolioLink' href="#">PORTFOLIO</a>
       </nav>
 
-      <section id='SERVICES' style="display:none">
-        <div id="form">
-            <h3 id="formTitle">Let use know if you have any question or just want to get ahold of use.</h3>
-            <form action='/services', name='services', id='servicesForm', method='post'>
-              <div class="formNames">
-                First Name: *<br>
-                <input type="text" name="firstName" id="firstName" required><br><br>
-                Last Name: *<br>
-                <input type="text" name="lastName" id="lastName" required><br><br>
-                Business Name: <br>
-                <input type="text" name="businessName" id="businessName" required><br><br>
-                Number: *<br>
-                <input type='tel' name="number" id="number" maxlength="10" required><br><br>
-                Current Website: <br>
-                <input type="text" name="websiteC" id="websiteC" required><br>
-              </div>
-              <div class="formInfo">
-                Email: *<br>
-                <input type="text" name="email" id="email" required><br>
-                Message: *<br>
-                <textarea name='message' id='message' rows="15" cols="50" required></textarea><br>
-                <button type="submit" name="button" value='Send' id='submitForm'>Submit</button>
-                <p id="required">* required</p>
-              </div>
-            </form>
-          </div>
+      <section id='SERVICES' style="display:none" class="swiper-container">
+        <!-- <div class="container swiper-wrapper"> -->
+
+          <article class="servicesOffd swiper-slide">
+
+            <img src="./images/webDesSrv.png" alt="" />
+
+            <h3>Website Design</h3>
+
+            <p id="webDesSrv">
+                From the ground up. We design beautiful websites. We utilize a custom in-house framework to design custom, beautiful and responsive websites. We offer a full stack solution designing beautifully laid out frontends and responsive fault-tolerance back-ends for an affordable price.
+            </p>
+
+            <div class="updateImgdiv">
+              <img src="./images/update.png" alt="" />
+              <img src="./images/right-arrow.png" alt="" />
+              <img src="./images/update2.png" alt="" />
+            </div>
+
+            <h3 id="x1">Rebuild/Redesign</h3>
+            <p>
+              Old site need sprucing up. Upgrade that old site to a interactive, responsive Web 2.0 site with us.
+
+            </p>
+
+            <img src="./images/smartphone-icon.png" alt="" />
+
+            <h3>Mobile App Design</h3>
+
+            <p>
+              Want to create a mobile app to advertise your site or services.
+            </p>
+
+          </article>
+
+          <div id="form">
+              <h3 id="formTitle">Let use know if you have any question or just want to get ahold of use.</h3>
+              <form action='/services', name='services', id='servicesForm', method='post'>
+                <div class="formNames">
+                  First Name: *<br>
+                  <input type="text" name="firstName" id="firstName" required><br><br>
+                  Last Name: *<br>
+                  <input type="text" name="lastName" id="lastName" required><br><br>
+                  Business Name: <br>
+                  <input type="text" name="businessName" id="businessName" required><br><br>
+                  Number: *<br>
+                  <input type='tel' name="number" id="number" maxlength="10" required><br><br>
+                  Current Website: <br>
+                  <input type="text" name="websiteC" id="websiteC" required><br>
+                </div>
+                <div class="formInfo">
+                  Email: *<br>
+                  <input type="text" name="email" id="email" required><br>
+                  Message: *<br>
+                  <textarea name='message' id='message' rows="15" cols="50" required></textarea><br>
+                  <button type="submit" name="button" value='Send' id='submitForm'>Submit</button>
+                  <p id="required">* required</p>
+                </div>
+              </form>
+            </div>
+          <!-- </div> -->
       </section>
 
       <section id='ABOUT' style="display:none">
 
       </section>
 
-      <section id='SERVICE' style="display:none">
-
-      </section>
 
       <section id='PORTFOLIO' class='swiper-container' style="display:none">
         <div id="scrollingArticles" class='swiper-wrapper'>
