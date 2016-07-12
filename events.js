@@ -120,10 +120,10 @@ $('.lpScrollingImage').on('click', function(event) {
           shadowScale: 0.94
       },
       autoplay: 5000,
-        nextButton: '#'+each.id+' .swiper-button-next',
-        prevButton: '#'+each.id+' .swiper-button-prev',
-        spaceBetween: 0,
-        keyboardControl: true
+      nextButton: '#'+each.id+' .swiper-button-next',
+      prevButton: '#'+each.id+' .swiper-button-prev',
+      spaceBetween: 0,
+      keyboardControl: true
     });
   });
   var swiper = new Swiper('#PORTFOLIO', {
@@ -145,3 +145,39 @@ $('.lpScrollingImage').on('click', function(event) {
     }
   });
 });
+
+if((window.location.href.indexOf('index.html') > -1) || (window.location.href.indexOf('Index.html') > -1)){
+  history.pushState('','','');
+}
+if((window.location.href.indexOf('about') > -1) || (window.location.href.indexOf('About') > -1)){
+  $('.landingPageSection').hide();
+  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+  $('#mainSection').removeClass('homePageBackground');
+  $('#mainSection').addClass('otherBackground');
+  clearInterval(changeImageTiming);
+  pageOn = 'ABOUT';
+}
+if((window.location.href.indexOf('portfolio') > -1) || (window.location.href.indexOf('Portfolio') > -1)){
+  $('.landingPageSection').hide();
+  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+  $('#mainSection').removeClass('homePageBackground');
+  $('#mainSection').addClass('otherBackground');
+  clearInterval(changeImageTiming);
+  pageOn = 'PORTFOLIO';
+}
+if((window.location.href.indexOf('services') > -1) || (window.location.href.indexOf('Services') > -1)){
+  $('.landingPageSection').hide();
+  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+  $('#mainSection').removeClass('homePageBackground');
+  $('#mainSection').addClass('otherBackground');
+  clearInterval(changeImageTiming);
+  pageOn = 'SERVICES';
+}
+if((window.location.href.indexOf('contact') > -1) || (window.location.href.indexOf('Contact') > -1)){
+  $('.landingPageSection').hide();
+  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+  $('#mainSection').removeClass('homePageBackground');
+  $('#mainSection').addClass('otherBackground');
+  clearInterval(changeImageTiming);
+  pageOn = 'CONTACT';
+}
