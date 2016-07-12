@@ -2,16 +2,17 @@ var imageCounter = 0;
 var changeImageTiming;
 var pageOn = 'HOME';
 var landingImagesArray = [
-  ['./images/happyhourapp.png', 'Happy Hour App', 'code12.jpg'],
-  ['./images/happyHourMap.png', 'Map View for happy Hour App', 'code13.jpg'],
-  ['./images/kittenChoose2.png', 'Kitten Voter', 'code12.jpg'],
-  ['./images/portfolioChooses.png', 'Corey Portfolio', 'code13.jpg'],
-  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'code12.jpg'],
-  ['./images/happyhourapp.png', 'Happy Hour App', 'code13.jpg'],
-  ['./images/portfolioChooses.png', 'Corey Portfolio', 'code12.jpg'],
-  ['./images/happyhourapp.png', 'Happy Hour App', 'code13.jpg'],
-  ['./images/portfolioWhaleTop.png', 'Portfolio Whalephants Description', 'code12.jpg'],
-  ['./images/kittenChoose2.png', 'Kitten Voter', 'code13.jpg']];
+  ['./images/website/happyHourHome.png', 'Happy Hour App', 'code12.jpg', 'happyHour'],
+  ['./images/website/happyHourMap.png', 'Map View for happy Hour App', 'code13.jpg', 'happyHour'],
+  ['./images/website/m1Home.png', 'M1 Tree and Landscape', 'code12.jpg', 'm1Tree'],
+  ['./images/website/m1Contact.png', 'Contact Page For M1 Tree', 'code13.jpg', 'm1Tree'],
+  ['./images/website/whalephantsContact.png', 'Contact Whalephants Page', 'code12.jpg', 'whalephants'],
+  ['./images/website/happyHourLocation.png', 'Happy Hour Location Section', 'code13.jpg', 'happyHour'],
+  ['./images/website/whalephantsHomePage.png', 'whalephants Website', 'code12.jpg', 'whalephants'],
+  ['./images/website/happyHourSearch.png', 'Happy Hour Search Section', 'code13.jpg', 'happyHour'],
+  ['./images/website/whalephantsCount.png', 'Whalephants Countdown Page', 'code12.jpg', 'whalephants'],
+  ['./images/website/whalephantsVote.png', 'Drink Voting Page For Whalephants', 'code13.jpg', 'whalephants']];
+swiperJS();
 
 function imageDots() {
   var numberOfImg = 0;
@@ -33,6 +34,7 @@ function imgDotClick() {
     $('.lpScrollingImage').attr('src', landingImagesArray[numberOfImg][0]);
     $('.ImageDesc').text(landingImagesArray[numberOfImg][1]);
     $('#mainSection').css('background-image', 'url(../images/'+landingImagesArray[numberOfImg][2]+')');
+    $('.lpScrollingImage').attr('title', landingImagesArray[numberOfImg][3]);
     $('#mainSection').removeClass('homePageBackground');
     setTimeout(function() {
       $('#mainSection').addClass('homePageBackground');
@@ -57,6 +59,7 @@ function changeImage() {
     $('.lpScrollingImage').attr('src', landingImagesArray[imageCounter][0]);
     $('.ImageDesc').text(landingImagesArray[imageCounter][1]);
     $('#mainSection').css('background-image', 'url(../images/'+landingImagesArray[imageCounter][2]+')');
+    $('.lpScrollingImage').attr('title', landingImagesArray[imageCounter][3]);
     $('#mainSection').removeClass('homePageBackground');
     setTimeout(function() {
       $('#mainSection').addClass('homePageBackground');

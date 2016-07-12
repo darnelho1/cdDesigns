@@ -1,0 +1,99 @@
+#PORTFOLIO{
+  flex-direction: column;
+  /*justify-content: space-around;*/
+  /*overflow: hidden;*/
+  /*height: auto;*/
+  width: 100%;
+  height: 80%;
+}
+#scrollingArticles{
+  /*overflow: hidden;*/
+  width: 100%;
+  height: 80%;
+  margin-bottom: 5%;
+}
+.eachArticle{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  /*border: solid 2px rgba(84, 82, 81, 0.9);*/
+  justify-content: center;
+  width: 90%;
+  height: 80%;
+  /*margin-bottom: 5%;*/
+  /*margin-top: 2%;*/
+  background-color: rgba(0, 0, 0, 0.84);
+  color: white;
+}
+#portTitle{
+  margin-top: 10%;
+  font-size: 2em;
+}
+#portLeft{
+  width: 45%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+#portRight{
+  width: 45%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#portImg{
+  width: 100%;
+  height: 60%;
+  margin: auto;
+}
+
+#portDesc{
+  width: 70%;
+  margin: auto;
+  font-size: 1.3em;
+  /*height: 90%;*/
+  text-align: center;
+}
+
+.gallery-top{
+  height: 100%;
+}
+.portEachWrapper{
+  height: 100%;
+}
+.portEachSlide{
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-pagination{
+  background-color: rgba(0, 0, 0, 0.64);
+  color: white;
+  padding: 7px;
+  border-radius: 15px;
+  /*border: solid;*/
+}
+.swiper-pagination-bullet{
+  background: white;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-container-vertical>.swiper-pagination .swiper-pagination-bullet{
+  margin: 10px 0;
+}
+
+.swiper-button-next{
+  z-index: 20;
+}
+
+.swiper-button-prev{
+  z-index: 20;
+}

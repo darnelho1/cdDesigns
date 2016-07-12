@@ -4,9 +4,40 @@
     <meta charset="utf-8">
     <title>CD Designs</title>
     <link rel="stylesheet" href="./animated.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/vender/swiper.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/vender/swiper.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./CSS/homepageStyles.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./CSS/servicesStyles.css" media="screen" title="no title" charset="utf-8">
-
+    <link rel="stylesheet" href="./CSS/portfolioStyles.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+    <script id='articleTemplate' type='text/template'>
+      <div id='{{id}}' class="eachArticle swiper-slide">
+        <div id="portLeft">
+          <h1 id='portTitle'><u>{{title}}</u></h1>
+          <div id='portImg' class="swiper">
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper portEachWrapper">
+                <div class="swiper-slide portEachSlide" style="background-image:url({{{img1}}})"></div>
+                <div class="swiper-slide portEachSlide" style="background-image:url({{{img2}}})"></div>
+                <div class="swiper-slide portEachSlide" style="background-image:url({{{img3}}})"></div>
+                <div class="swiper-slide portEachSlide" style="background-image:url({{{img4}}})"></div>
+                <div class="swiper-slide portEachSlide" style="background-image:url({{{img5}}})"></div>
+                <div class="swiper-slide portEachSlide" style="background-image:url({{{img6}}})"></div>
+                <div class="swiper-slide portEachSlide" style="background-image:url({{{img7}}})"></div>
+              </div>
+              <div class="swiper-button-next swiper-button-white"></div>
+              <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+        </div>
+          <a id='portLink' href="{{link}}">To {{title}}</a>
+        </div>
+        <div id="portRight">
+          <p id='portDesc'>
+            {{desc}}
+          </p>
+        </div>
+      </div>
+    </script>
 
   </head>
   <body>
@@ -31,7 +62,7 @@
             Happy Hour App
           </p>
           <img class="lpContainerImage" src="./images/cmpscreen.png" alt="" />
-          <img class="lpScrollingImage animated" src="./images/happyhourapp.png" alt="" />
+          <img class="lpScrollingImage animated" src="./images/happyhourapp.png" title='happyHour' alt="" />
           <div class="blackBackground">
 
           </div>
@@ -84,8 +115,11 @@
 
       </section>
 
-      <section id='PORTFOLIO'style="display:none">
+      <section id='PORTFOLIO' class='swiper-container' style="display:none">
+        <div id="scrollingArticles" class='swiper-wrapper'>
 
+        </div>
+        <div class="swiper-pagination"></div>
       </section>
 
 
@@ -93,6 +127,8 @@
     </section>
   </body>
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js'></script>
+  <script src="/vender/swiper.min.js"></script>
   <script type="text/javascript" src='./script.js'></script>
+  <script type="text/javascript" src='./db.js'></script>
   <script type="text/javascript" src='./events.js'></script>
 </html>
