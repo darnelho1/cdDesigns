@@ -42,6 +42,6 @@ var articles = [
       img6:                '/images/website/whalephantsHangman.png',
       img7:                '/images/website/whalephantsThanks.png',
       link:                'http://whalephants.herokuapp.com',
-      desc:               'Whalephants is a project that my group worked on. We built a website for an organization that builds a camp out at Burning Man each year. This website is for people to come check out what the camp is about and what all they bring to the community. There are many different pages; about page, drink voting page, countdown page, game page, and a thank you page. Head over to the Whalephants website and vote on the next drinks that they will be making out at Burning Man or go over and play the Hang Man game. There are three words, see if you can guess all of them. </br>'
+      desc:               'Whalephants is a project that my group worked on. We built a website for an organization that builds a camp out at Burning Man each year. This website is for people to come check out what the camp is about and what all they bring to the community. There are many different pages; about page, drink voting page, countdown page, game page, and a thank you page. Head over to the Whalephants website and vote on the next drinks that they will be making out at Burning Man or go over and play the Hang Man game. There are three words, see if you can guess all of them.'
     }
   ];
