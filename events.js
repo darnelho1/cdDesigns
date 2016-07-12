@@ -119,6 +119,7 @@ $('.lpScrollingImage').on('click', function(event) {
           shadowOffset: 20,
           shadowScale: 0.94
       },
+      autoplay: 5000,
         nextButton: '#'+each.id+' .swiper-button-next',
         prevButton: '#'+each.id+' .swiper-button-prev',
         spaceBetween: 0,

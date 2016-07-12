@@ -43,5 +43,20 @@ var articles = [
       img7:                '/images/website/whalephantsThanks.png',
       link:                'http://whalephants.herokuapp.com',
       desc:               'Whalephants is a project that my group worked on. We built a website for an organization that builds a camp out at Burning Man each year. This website is for people to come check out what the camp is about and what all they bring to the community. There are many different pages; about page, drink voting page, countdown page, game page, and a thank you page. Head over to the Whalephants website and vote on the next drinks that they will be making out at Burning Man or go over and play the Hang Man game. There are three words, see if you can guess all of them.'
+    },
+    {
+      id:                 'seaBrew',
+      title:              'Seattle Brew Site',
+      publishedOn:        'Template',
+      url:                'seabrew',
+      img1:                '/images/website/seaBrewCider.png',
+      img2:                '/images/website/seaBrewFre.png',
+      img3:                '/images/website/seaBrew6.png',
+      img4:                '/images/website/seaBrewAbout.png',
+      img5:                '/images/website/seaBrewAbout2.png',
+      img6:                '',
+      img7:                '',
+      link:                '',
+      desc:               'Seattle Brew Site is ...'
     }
   ];
