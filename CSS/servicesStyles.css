@@ -23,6 +23,7 @@ body{
   /*height: 80%;*/
   display: flex;
   justify-content: space-between;
+  /*align-items: center;*/
   flex-direction: column;
   border: solid 2px rgba(84, 82, 81, 0.9);
   background-color: rgba(0, 0, 0, 0.84);
@@ -36,6 +37,11 @@ body{
   justify-content: space-between;
   flex-direction: row;
   margin-bottom: 5%;
+}
+
+#formTitle{
+  padding: 3%;
+  align-items: center;
 }
 
 .formNames{
