@@ -1,4 +1,55 @@
+var swiper;
+function slidePrep(callback) {
+  $('#scrollingArticles').empty();
+  articles.forEach(function(each) {
+    var template = $('#articleTemplate').html();
+    var compileTemplate = Handlebars.compile(template);
+    var html = compileTemplate(each);
+    $('#scrollingArticles').append(html);
+    var galleryTop = new Swiper('#'+each.id+' .gallery-top', {
+      effect: 'cube',
+      grabCursor: true,
+      cube: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94
+      },
+        nextButton: '#'+each.id+' .swiper-button-next',
+        prevButton: '#'+each.id+' .swiper-button-prev',
+        spaceBetween: 0,
+        keyboardControl: true
+    });
+  });
+    swiper = new Swiper('#PORTFOLIO', {
+      pagination: '.swiper-pagination',
+      direction: 'vertical',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 0,
+      keyboardControl: true,
+      mousewheelControl: true
+  });
+
+    if (callback) {
+        callback();
+    }
+  else{
+    history.pushState('/','/','/');
+    history.pushState('portfolio?'+articles[0].id,'portfolio?'+articles[0].id,'portfolio?'+articles[0].id);
+  }
+
+  swiper.on('slideChangeStart', function () {
+      var swiperIndex = swiper.activeIndex;
+      var swiperID = articles[swiperIndex].id;
+      history.pushState('/','/','/');
+      history.pushState('portfolio?'+swiperID,'portfolio?'+swiperID,'portfolio?'+swiperID);
+      console.log(swiperID);
+  });
+}
+
 $('.navLink').click(function(){
+  history.pushState('/','/','/');
   console.log(this.text);
   if (pageOn === 'HOME') {
     $('.landingPageSection').hide();
@@ -17,40 +68,12 @@ $('.navLink').click(function(){
   $('#pageNav').hide();
   $('#pageNavHeader').css('display', 'flex');
   if (pageOn === 'PORTFOLIO') {
-    $('#scrollingArticles').empty();
-    articles.forEach(function(each) {
-      var template = $('#articleTemplate').html();
-      var compileTemplate = Handlebars.compile(template);
-      var html = compileTemplate(each);
-      $('#scrollingArticles').append(html);
-      var galleryTop = new Swiper('#'+each.id+' .gallery-top', {
-        effect: 'cube',
-        grabCursor: true,
-        cube: {
-            shadow: true,
-            slideShadows: true,
-            shadowOffset: 20,
-            shadowScale: 0.94
-        },
-          nextButton: '#'+each.id+' .swiper-button-next',
-          prevButton: '#'+each.id+' .swiper-button-prev',
-          spaceBetween: 0,
-          keyboardControl: true
-      });
-    });
-    var swiper = new Swiper('#PORTFOLIO', {
-        pagination: '.swiper-pagination',
-        direction: 'vertical',
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 0,
-        keyboardControl: true,
-        mousewheelControl: true
-    });
+    slidePrep();
   }
 });
 
 $('#pageTitle').click(function(event) {
+  history.pushState('/','/','/');
   window.open("index.html","_self");
 });
 
@@ -104,37 +127,7 @@ $('.lpScrollingImage').on('click', function(event) {
   $("#PORTFOLIO").css('display', 'flex');
   $('#pageNav').hide();
   $('#pageNavHeader').css('display', 'flex');
-  $('#scrollingArticles').empty();
-  articles.forEach(function(each) {
-    var template = $('#articleTemplate').html();
-    var compileTemplate = Handlebars.compile(template);
-    var html = compileTemplate(each);
-    $('#scrollingArticles').append(html);
-    var galleryTop = new Swiper('#'+each.id+' .gallery-top', {
-      effect: 'cube',
-      grabCursor: true,
-      cube: {
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94
-      },
-      autoplay: 5000,
-      nextButton: '#'+each.id+' .swiper-button-next',
-      prevButton: '#'+each.id+' .swiper-button-prev',
-      spaceBetween: 0,
-      keyboardControl: true
-    });
-  });
-  var swiper = new Swiper('#PORTFOLIO', {
-      pagination: '.swiper-pagination',
-      direction: 'vertical',
-      slidesPerView: 1,
-      paginationClickable: true,
-      spaceBetween: 0,
-      keyboardControl: true,
-      mousewheelControl: true
-  });
+  slidePrep();
   var eachCounter = -1;
   var pickedAtricle = 0;
   articles.forEach(function(each) {
@@ -146,10 +139,11 @@ $('.lpScrollingImage').on('click', function(event) {
   });
 });
 
-if((window.location.href.indexOf('index.html') > -1) || (window.location.href.indexOf('Index.html') > -1)){
+testvar = window.location.href.toUpperCase();
+if(testvar.indexOf('INDEX.HTML') > -1){
   history.pushState('/','/','/');
 }
-if((window.location.href.indexOf('about') > -1) || (window.location.href.indexOf('About') > -1)){
+if(testvar.indexOf('ABOUT') > -1){
   $('.landingPageSection').hide();
   $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
   $('#mainSection').removeClass('homePageBackground');
@@ -163,51 +157,38 @@ if((window.location.href.indexOf('about') > -1) || (window.location.href.indexOf
   $('#pageNav').hide();
   $('#pageNavHeader').css('display', 'flex');
 }
-if((window.location.href.indexOf('portfolio') > -1) || (window.location.href.indexOf('Portfolio') > -1)){
-  $('.landingPageSection').hide();
-  $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
-  $('#mainSection').removeClass('homePageBackground');
-  $('#mainSection').addClass('otherBackground');
-  setTimeout(function functionName() {
-    clearInterval(changeImageTiming);
-  },1000);
-  pageOn = 'PORTFOLIO';
-  $("#PORTFOLIO").show();
-  $("#PORTFOLIO").css('display', 'flex');
-  $('#pageNav').hide();
-  $('#pageNavHeader').css('display', 'flex');
-  $('#scrollingArticles').empty();
-  articles.forEach(function(each) {
-    var template = $('#articleTemplate').html();
-    var compileTemplate = Handlebars.compile(template);
-    var html = compileTemplate(each);
-    $('#scrollingArticles').append(html);
-    var galleryTop = new Swiper('#'+each.id+' .gallery-top', {
-      effect: 'cube',
-      grabCursor: true,
-      cube: {
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94
-      },
-        nextButton: '#'+each.id+' .swiper-button-next',
-        prevButton: '#'+each.id+' .swiper-button-prev',
-        spaceBetween: 0,
-        keyboardControl: true
+if(testvar.indexOf('PORTFOLIO') > -1){
+    $('.landingPageSection').hide();
+    $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
+    $('#mainSection').removeClass('homePageBackground');
+    $('#mainSection').addClass('otherBackground');
+    setTimeout(function functionName() {
+      clearInterval(changeImageTiming);
+    },1000);
+    pageOn = 'PORTFOLIO';
+    $("#PORTFOLIO").show();
+    $("#PORTFOLIO").css('display', 'flex');
+    $('#pageNav').hide();
+    $('#pageNavHeader').css('display', 'flex');
+    slidePrep(function(){
+      if(window.location.href.indexOf('?') > -1){
+        var slideId = window.location.href.split('?')[1];
+          var eachCounter = -1;
+          var pickedAtricle;
+          articles.forEach(function(each) {
+            eachCounter ++;
+            if (each.id.toUpperCase() === slideId.toUpperCase()) {
+              pickedAtricle = eachCounter;
+              swiper.slideTo(pickedAtricle);
+            }
+          });
+        }
     });
-  });
-  var swiper = new Swiper('#PORTFOLIO', {
-      pagination: '.swiper-pagination',
-      direction: 'vertical',
-      slidesPerView: 1,
-      paginationClickable: true,
-      spaceBetween: 0,
-      keyboardControl: true,
-      mousewheelControl: true
-  });
-}
-if((window.location.href.indexOf('services') > -1) || (window.location.href.indexOf('Services') > -1)){
+
+  }
+// }
+
+if(testvar.indexOf('SERVICES') > -1){
   $('.landingPageSection').hide();
   $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
   $('#mainSection').removeClass('homePageBackground');
@@ -221,7 +202,7 @@ if((window.location.href.indexOf('services') > -1) || (window.location.href.inde
   $('#pageNav').hide();
   $('#pageNavHeader').css('display', 'flex');
 }
-if((window.location.href.indexOf('contact') > -1) || (window.location.href.indexOf('Contact') > -1)){
+if(testvar.indexOf('CONTACT') > -1){
   $('.landingPageSection').hide();
   $('#mainSection').css('background-image', 'url("./images/servicesBackground.jpg")');
   $('#mainSection').removeClass('homePageBackground');
