@@ -20,6 +20,13 @@ app.get('*', function(request, response) {
   response.sendFile('index.html', { root: '.' });
 });
 
+// app.get('/*', function(req, res) {
+//   res.sendFile('/index.html', {root:__dirname + '.'});
+// });
+//
+app.get('portfolio/*', function(req, res) {
+  res.sendFile('index.html', {root: '.'});
+});
 
 app.post('/contactFormSend', function (req, res) {
   var form = req.body.info;

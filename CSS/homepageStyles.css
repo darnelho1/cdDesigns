@@ -84,6 +84,11 @@ body{
   /*border: solid;*/
 }
 
+.navLink{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 #pageNavHeader{
   flex-direction: row;
   justify-content: space-around;
